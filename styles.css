@@ -319,3 +319,8 @@ body::before{animation:orbDrift 26s ease-in-out infinite;will-change:transform}
 .role-loc{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
 .role-loc::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--accent-2);box-shadow:0 0 8px var(--accent-2)}
 .role-loc.remote::before{background:#7bdc9a;box-shadow:0 0 8px #7bdc9a}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.roles-grid .core{padding:28px 26px}
+.roles-grid h3{font-size:1.25rem;margin-bottom:12px}
+.roles-grid p{color:var(--muted);font-size:.95rem}
+@media(max-width:640px){.roles-grid{grid-template-columns:1fr}}
