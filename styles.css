@@ -326,3 +326,10 @@ body::before{animation:orbDrift 26s ease-in-out infinite;will-change:transform}
 @media(max-width:640px){.roles-grid{grid-template-columns:1fr}}
 .role-pay{font-family:var(--font-display);color:var(--accent-2);font-weight:600;font-size:1.05rem;margin:0 0 14px}
 .role-pay span{color:var(--muted);font-family:var(--font-body);font-weight:500;font-size:.8rem}
+
+/* Responsive multi-column grids (override inline defaults on small screens) */
+.value-grid.four{grid-template-columns:repeat(4,1fr)}
+.steps.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.value-grid.four{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.steps.three{grid-template-columns:1fr}}
+@media(max-width:520px){.value-grid.four{grid-template-columns:1fr}}
