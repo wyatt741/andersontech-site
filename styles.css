@@ -324,3 +324,5 @@ body::before{animation:orbDrift 26s ease-in-out infinite;will-change:transform}
 .roles-grid h3{font-size:1.25rem;margin-bottom:12px}
 .roles-grid p{color:var(--muted);font-size:.95rem}
 @media(max-width:640px){.roles-grid{grid-template-columns:1fr}}
+.role-pay{font-family:var(--font-display);color:var(--accent-2);font-weight:600;font-size:1.05rem;margin:0 0 14px}
+.role-pay span{color:var(--muted);font-family:var(--font-body);font-weight:500;font-size:.8rem}
