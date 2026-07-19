@@ -261,3 +261,31 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px;background:rgba(255,
   .foot-top{flex-direction:column;gap:32px}
   section{padding:72px 0}
 }
+
+/* ===== Data center animations ===== */
+@keyframes orbDrift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-2.5%,2%,0) scale(1.07)}}
+body::before{animation:orbDrift 26s ease-in-out infinite;will-change:transform}
+
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.rack-wrap{position:absolute;top:50%;right:4%;transform:translateY(-50%);width:min(32vw,360px);z-index:1;opacity:.85;pointer-events:none;
+  -webkit-mask-image:radial-gradient(130% 120% at 55% 45%,#000 50%,transparent 100%);mask-image:radial-gradient(130% 120% at 55% 45%,#000 50%,transparent 100%)}
+.rack-wrap svg{width:100%;height:auto;display:block}
+
+@keyframes led{0%,100%{opacity:.16}50%{opacity:1}}
+.led{animation:led 2.6s ease-in-out infinite}
+.led.b{animation-delay:.5s}.led.c{animation-delay:1s}.led.d{animation-delay:1.5s}
+.led.e{animation-delay:.8s}.led.f{animation-delay:2s}.led.g{animation-delay:1.3s}.led.h{animation-delay:.3s}
+
+@keyframes flow{to{stroke-dashoffset:-40}}
+.flow{stroke-dasharray:6 12;animation:flow 2.2s linear infinite}
+.flow.s{animation-duration:3.4s;animation-direction:reverse}
+
+.data-line{position:relative;height:1px;overflow:hidden;
+  background:linear-gradient(90deg,transparent,var(--line-2) 30%,var(--line-2) 70%,transparent)}
+.data-line::after{content:"";position:absolute;top:-1.5px;left:0;width:90px;height:4px;border-radius:4px;
+  background:linear-gradient(90deg,transparent,var(--accent-2),transparent);filter:blur(1px);
+  animation:dataRun 5s linear infinite;will-change:transform}
+@keyframes dataRun{from{transform:translateX(-90px)}to{transform:translateX(calc(100vw + 90px))}}
+
+@media(max-width:1024px){.rack-wrap{display:none}}
