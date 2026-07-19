@@ -50,7 +50,7 @@
     <div class="wrap contact-grid">
 
       <div class="reveal">
-        <div class="img-frame" style="margin-bottom:30px"><img src="assets/dc-branded.jpg" alt="Anderson Technologies data center" loading="lazy"></div>
+        <div class="img-frame" style="margin-bottom:30px"><img src="assets/dc-branded.jpg" alt="Anderson Technologies data center" loading="lazy" style="height:auto"></div>
         <ul class="contact-info">
           <li><span class="lbl">Arizona</span><a href="tel:+14802874190">(480) 287-4190</a></li>
           <li><span class="lbl">California</span><a href="tel:+18053408055">(805) 340-8055</a></li>
@@ -61,7 +61,7 @@
 
       <div class="reveal d1">
         <div class="shell"><div class="core" style="padding:34px">
-          <form action="https://formsubmit.co/info@andersontechsupport.com" method="POST">
+          <form action="https://formsubmit.co/info@andersontechsupport.com" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="New inquiry from andersontechsupport.com">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -81,6 +81,10 @@
             <div class="field">
               <label for="msg">Project details</label>
               <textarea id="msg" name="message" required></textarea>
+            </div>
+            <div class="field">
+              <label for="file">Attachment or resume (optional)</label>
+              <input type="file" id="file" name="attachment" accept=".pdf,.doc,.docx,.txt">
             </div>
             <button type="submit" class="btn btn-primary">Send message <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
           </form>
@@ -124,5 +128,21 @@
 </footer>
 
 <script src="app.js"></script>
+<script>
+(function(){
+  var role = new URLSearchParams(location.search).get('role');
+  if(!role) return;
+  var h1 = document.querySelector('.page-head h1');
+  var lead = document.querySelector('.page-head .lead');
+  var mlbl = document.querySelector('label[for="msg"]');
+  var msg = document.getElementById('msg');
+  var subj = document.querySelector('input[name="_subject"]');
+  if(h1) h1.textContent = 'Apply: ' + role;
+  if(lead) lead.textContent = 'Attach your resume and tell us about yourself. We will be in touch.';
+  if(mlbl) mlbl.textContent = 'Message';
+  if(msg) msg.value = 'Application for: ' + role + '\n\n';
+  if(subj) subj.value = 'Job application: ' + role;
+})();
+</script>
 </body>
 </html>
