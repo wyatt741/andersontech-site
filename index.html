@@ -3,307 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anderson Technologies LLC — Data Center & Mission-Critical Commissioning | Arizona & California</title>
-<meta name="description" content="Anderson Technologies LLC provides electrical and mechanical commissioning for data centers and mission-critical facilities — submittal review through integrated systems testing. Arizona & California.">
+<title>Anderson Technologies LLC | Data Center and Mission Critical Commissioning</title>
+<meta name="description" content="Anderson Technologies LLC provides independent electrical and mechanical commissioning for data centers and mission critical facilities across Arizona and California.">
 <link rel="icon" href="assets/favicon.ico">
-<!-- Open Graph / social preview -->
-<meta property="og:title" content="Anderson Technologies LLC — Data Center Commissioning">
-<meta property="og:description" content="Electrical & mechanical commissioning for data centers and mission-critical facilities.">
+<meta property="og:title" content="Anderson Technologies LLC">
+<meta property="og:description" content="Independent electrical and mechanical commissioning for data centers and mission critical facilities.">
 <meta property="og:type" content="website">
-<style>
-  :root{
-    --bg:#0a0a0b; --panel:#111114; --panel-2:#16161a; --line:#26262c;
-    --text:#c9c9d1; --muted:#8a8a95; --white:#f4f4f6;
-    --accent:#4da3ff; --accent-2:#7cc0ff;
-    --silver:linear-gradient(180deg,#ffffff 0%,#c4c8d0 55%,#8f95a1 100%);
-    --maxw:1140px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;-webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent);text-decoration:none}
-  a:hover{color:var(--accent-2)}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  h1,h2,h3{color:var(--white);line-height:1.15;letter-spacing:-.02em;font-weight:700}
-  .eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-
-  /* Buttons */
-  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;font-size:.95rem;
-    transition:transform .12s ease,box-shadow .2s ease;border:1px solid transparent;cursor:pointer}
-  .btn-primary{background:var(--accent);color:#04121f;box-shadow:0 6px 24px rgba(77,163,255,.28)}
-  .btn-primary:hover{color:#04121f;transform:translateY(-2px);box-shadow:0 10px 30px rgba(77,163,255,.4)}
-  .btn-ghost{border:1px solid var(--line);color:var(--white);background:transparent}
-  .btn-ghost:hover{border-color:var(--accent);color:var(--white)}
-
-  /* Nav */
-  header{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.82);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  nav .logo{height:30px;width:auto}
-  .nav-links{display:flex;gap:32px;align-items:center}
-  .nav-links a{color:var(--text);font-size:.92rem;font-weight:500}
-  .nav-links a:hover{color:var(--white)}
-  .nav-cta{padding:10px 20px;font-size:.88rem}
-  .burger{display:none;background:none;border:0;color:var(--white);font-size:1.6rem;cursor:pointer}
-
-  /* Hero */
-  .hero{position:relative;padding:110px 0 96px;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;z-index:0;
-    background:
-      radial-gradient(650px 340px at 78% 8%,rgba(77,163,255,.16),transparent 60%),
-      linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px) 0 0/44px 44px,
-      linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px) 0 0/44px 44px;
-    mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
-  .hero .wrap{position:relative;z-index:1;max-width:840px}
-  .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:18px 0 20px}
-  .hero h1 .grad{background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.lead{font-size:1.18rem;color:var(--muted);max-width:640px;margin-bottom:34px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-
-  /* Trust strip */
-  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
-  .trust .wrap{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between;padding:22px 24px}
-  .trust div{font-size:.9rem;color:var(--muted)}
-  .trust b{color:var(--white);font-weight:600}
-
-  /* Sections */
-  section.block{padding:88px 0}
-  .section-head{max-width:680px;margin-bottom:48px}
-  .section-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:12px 0 14px}
-  .section-head p{color:var(--muted);font-size:1.06rem}
-
-  /* Services */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 26px;
-    transition:border-color .2s ease,transform .2s ease}
-  .card:hover{border-color:rgba(77,163,255,.5);transform:translateY(-4px)}
-  .card .ico{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;margin-bottom:18px;
-    background:linear-gradient(160deg,rgba(77,163,255,.18),rgba(77,163,255,.04));border:1px solid rgba(77,163,255,.25)}
-  .card .ico svg{width:24px;height:24px;stroke:var(--accent-2);fill:none;stroke-width:1.8}
-  .card h3{font-size:1.22rem;margin-bottom:12px}
-  .card ul{list-style:none;margin-top:6px}
-  .card li{position:relative;padding-left:22px;margin-bottom:8px;font-size:.95rem;color:var(--text)}
-  .card li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;
-    background:var(--accent);box-shadow:0 0 10px rgba(77,163,255,.6)}
-
-  /* Why / two-col */
-  .why{background:linear-gradient(180deg,var(--bg),var(--panel-2))}
-  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  .why h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:12px 0 18px}
-  .why p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
-  .valuegrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .value{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .value b{color:var(--white);display:block;margin-bottom:6px;font-size:1rem}
-  .value span{font-size:.9rem;color:var(--muted)}
-
-  /* Contact */
-  .contact{background:var(--panel)}
-  .contact .split{grid-template-columns:1fr 1.1fr;align-items:start}
-  .contact h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:12px 0 18px}
-  .contact-info li{list-style:none;margin-bottom:18px;color:var(--text)}
-  .contact-info .lbl{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
-  .contact-info a{color:var(--white);font-size:1.1rem;font-weight:600}
-  form{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:30px}
-  .field{margin-bottom:18px}
-  label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:7px}
-  input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;
-    padding:12px 14px;color:var(--white);font-size:.98rem;font-family:inherit}
-  input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(77,163,255,.18)}
-  textarea{min-height:120px;resize:vertical}
-  form .btn-primary{width:100%;border:0;font-size:1rem}
-  .formnote{font-size:.8rem;color:var(--muted);margin-top:14px;text-align:center}
-
-  /* Footer */
-  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg)}
-  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-  .foot img{height:24px;opacity:.85}
-  .foot small{color:var(--muted);font-size:.85rem}
-
-  @media(max-width:860px){
-    .cards{grid-template-columns:1fr}
-    .split{grid-template-columns:1fr;gap:36px}
-    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;
-      background:var(--panel);border-bottom:1px solid var(--line);padding:8px 0}
-    .nav-links.open{display:flex}
-    .nav-links a{padding:14px 24px;width:100%;border-top:1px solid var(--line)}
-    .nav-links .nav-cta{margin:12px 24px;text-align:center}
-    .burger{display:block}
-    .valuegrid{grid-template-columns:1fr}
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <nav>
-      <a href="#top"><img src="assets/logo.png" alt="Anderson Technologies" class="logo"></a>
-      <div class="nav-links" id="navlinks">
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
-      </div>
-      <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
-    </nav>
-  </div>
-</header>
+<div class="nav-shell">
+  <nav class="nav">
+    <a href="index.html"><img src="assets/logo.png" alt="Anderson Technologies" class="nav-logo"></a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get in touch <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <button class="burger" aria-label="Open menu"><span></span><span></span></button>
+  </nav>
+</div>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
 
-<main id="top">
+<main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Mission-Critical Commissioning</span>
-      <h1>Critical facilities that power on right <span class="grad">the first time.</span></h1>
-      <p class="lead">Anderson Technologies provides electrical and mechanical commissioning for data centers
-        and mission-critical facilities — from submittal review through integrated systems testing — so your
-        critical load comes online on schedule and stays online.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Start a Project</a>
-        <a href="tel:+14802874190" class="btn btn-ghost">Call (480) 287-4190</a>
+      <img src="assets/logo.png" alt="Anderson Technologies" class="hero-logo reveal">
+      <span class="eyebrow reveal d1">Mission Critical Commissioning</span>
+      <h1 class="display reveal d1">Critical facilities that power on right <span class="grad">the first time.</span></h1>
+      <p class="lead reveal d2">Independent electrical and mechanical commissioning for data centers and mission critical facilities. From submittal review through integrated systems testing, we verify that critical load comes online on schedule and stays online.</p>
+      <div class="hero-cta reveal d3">
+        <a href="contact.html" class="btn btn-primary">Start a project <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="services.html" class="btn btn-ghost">View services</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
   <div class="trust">
     <div class="wrap">
-      <div><b>Electrical &amp; mechanical</b> — full-discipline Cx coverage</div>
-      <div><b>Submittal review → IST</b> — the entire commissioning lifecycle</div>
-      <div><b>Built for uptime</b> — N+1, 2N &amp; concurrently maintainable</div>
+      <div class="row">
+        <div class="cell reveal"><b>Electrical and mechanical</b><span>Full discipline commissioning coverage</span></div>
+        <div class="cell reveal d1"><b>Submittal review to IST</b><span>The entire commissioning lifecycle</span></div>
+        <div class="cell reveal d2"><b>Built for uptime</b><span>N+1, 2N, and concurrently maintainable</span></div>
+      </div>
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <section class="block" id="services">
+  <section>
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">What we do</span>
-        <h2>Commissioning that de-risks your critical load</h2>
-        <p>Independent, script-based commissioning across every system that keeps a data center
-          running — verified in the field, documented for turnover.</p>
+        <span class="eyebrow reveal">What we do</span>
+        <h2 class="h2 reveal">Commissioning that de-risks your critical load</h2>
+        <p class="lead reveal d1">Independent, script based commissioning across every system that keeps a facility running. Verified in the field, documented for turnover.</p>
       </div>
-      <div class="cards">
-
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>Electrical Commissioning</h3>
-          <ul>
-            <li>MV switchgear, UPS, generators &amp; ATS/STS</li>
-            <li>Paralleling, load-bank &amp; failure-mode testing</li>
-            <li>Power distribution, busway &amp; panelboards</li>
-            <li>Construction verification through functional testing</li>
-          </ul>
+      <div class="bento">
+        <div class="span-2 reveal">
+          <div class="shell"><div class="core">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L5 13h6l-1 9 9-11h-6z"/></svg></div>
+            <h3>Electrical</h3>
+            <p>MV switchgear, UPS, generators, ATS and STS, paralleling, load bank and failure mode testing, power distribution.</p>
+          </div></div>
         </div>
-
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.2 7l15.6 10M19.8 7L4.2 17"/></svg></div>
-          <h3>Mechanical &amp; Cooling</h3>
-          <ul>
-            <li>Chillers, CRAC/CRAH &amp; cooling distribution units</li>
-            <li>Pumps, valves &amp; airflow / thermal verification</li>
-            <li>Sequence-of-operations (SOO) validation</li>
-            <li>Controls &amp; BMS point-to-point checks</li>
-          </ul>
+        <div class="span-2 reveal d1">
+          <div class="shell"><div class="core">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.2 7l15.6 10M19.8 7L4.2 17"/></svg></div>
+            <h3>Mechanical</h3>
+            <p>Chillers, CRAC and CRAH, cooling distribution units, pumps, airflow and thermal verification, sequence of operations validation.</p>
+          </div></div>
         </div>
-
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 6h10a1 1 0 011 1v13a1 1 0 01-1 1H7a1 1 0 01-1-1V7a1 1 0 011-1z"/><path d="M9 13l2 2 4-4"/></svg></div>
-          <h3>Integrated Testing &amp; QA/QC</h3>
-          <ul>
-            <li>Integrated systems &amp; pull-the-plug testing</li>
-            <li>Test-script development &amp; review</li>
-            <li>Spec-vs-submittal conflict resolution</li>
-            <li>Issue tracking &amp; turnover documentation</li>
-          </ul>
+        <div class="span-2 reveal d2">
+          <div class="shell"><div class="core">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 6h10a1 1 0 011 1v13a1 1 0 01-1 1H7a1 1 0 01-1-1V7a1 1 0 011-1z"/><path d="M9 13l2 2 4-4"/></svg></div>
+            <h3>Integrated Testing</h3>
+            <p>Integrated systems and pull the plug testing, test script development and review, spec versus submittal conflict resolution, turnover documentation.</p>
+          </div></div>
         </div>
-
+      </div>
+      <div style="margin-top:34px" class="reveal">
+        <a href="services.html" class="btn btn-ghost">Explore all services</a>
       </div>
     </div>
   </section>
 
-  <!-- WHY -->
-  <section class="block why" id="why">
+  <section>
     <div class="wrap split">
-      <div>
-        <span class="eyebrow">Why Anderson Technologies</span>
-        <h2>A commissioning partner who owns the details</h2>
-        <p>We commission the electrical and mechanical systems behind data centers and other
-          mission-critical facilities — verifying that what was designed is what got built, and that
-          it performs under real failure conditions before it ever carries live load.</p>
-        <p>Independent, thorough, and documented — so your turnover package holds up.</p>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:22px">Why Anderson Technologies</span>
+        <h2 class="h2" style="margin:0 0 20px">A commissioning partner who owns the details</h2>
+        <p class="lead" style="margin-bottom:16px">We commission the electrical and mechanical systems behind data centers and other mission critical facilities. We verify that what was designed is what got built, and that it performs under real failure conditions before it ever carries live load.</p>
+        <p class="muted">Independent, thorough, and documented, so your turnover package holds up.</p>
       </div>
-      <div class="valuegrid">
-        <div class="value"><b>Vendor-independent</b><span>Third-party Cx with no stake in the install.</span></div>
-        <div class="value"><b>Full lifecycle</b><span>Submittal review &amp; factory witness through IST.</span></div>
-        <div class="value"><b>Two locations</b><span>On-site across Arizona and California.</span></div>
-        <div class="value"><b>Rigorous QA/QC</b><span>Specs cross-checked against submittals before the field.</span></div>
+      <div class="value-grid reveal d1">
+        <div class="value"><b>Vendor independent</b><span>Third party commissioning with no stake in the install.</span></div>
+        <div class="value"><b>Full lifecycle</b><span>Submittal review and factory witness through IST.</span></div>
+        <div class="value"><b>Two locations</b><span>On site across Arizona and California.</span></div>
+        <div class="value"><b>Rigorous QA/QC</b><span>Specs cross checked against submittals before the field.</span></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="block contact" id="contact">
-    <div class="wrap split">
-      <div>
-        <span class="eyebrow">Get in touch</span>
-        <h2>Let's talk about your next project</h2>
-        <p style="color:var(--muted);margin-bottom:28px">Tell us about your facility and schedule. We'll get back to you within one business day.</p>
-        <ul class="contact-info">
-          <li><span class="lbl">Arizona</span><a href="tel:+14802874190">(480) 287-4190</a></li>
-          <li><span class="lbl">California</span><a href="tel:+18053408055">(805) 340-8055</a></li>
-          <li><span class="lbl">Email</span><a href="mailto:info@andersontechsupport.com">info@andersontechsupport.com</a></li>
-          <li><span class="lbl">Serving</span><span style="color:var(--white);font-weight:600">Arizona &amp; California</span></li>
-        </ul>
-      </div>
-
-      <!-- Posts to FormSubmit (free, no signup) → emails submissions to info@andersontechsupport.com.
-           First real submission triggers a one-time confirmation email you must click to activate. -->
-      <form action="https://formsubmit.co/info@andersontechsupport.com" method="POST">
-        <input type="hidden" name="_subject" value="New inquiry from andersontechsupport.com">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+  <section class="cta-band">
+    <div class="wrap reveal">
+      <div class="shell"><div class="core">
+        <h2 class="h2">Ready to de-risk your next build?</h2>
+        <p>Tell us about your facility and schedule. We will get back to you within one business day.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary">Start a project <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a href="tel:+14802874190" class="btn btn-ghost">Call (480) 287-4190</a>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="msg">How can we help?</label>
-          <textarea id="msg" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="formnote">Or email us directly at info@andersontechsupport.com</p>
-      </form>
+      </div></div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <img src="assets/logo.png" alt="Anderson Technologies">
-    <small>© 2026 Anderson Technologies LLC · Arizona &amp; California · All rights reserved.</small>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="Anderson Technologies" class="foot-logo">
+        <p>Electrical and mechanical commissioning for data centers and mission critical facilities across Arizona and California.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <a href="tel:+14802874190">Arizona (480) 287-4190</a>
+          <a href="tel:+18053408055">California (805) 340-8055</a>
+          <a href="mailto:info@andersontechsupport.com">info@andersontechsupport.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <small>© 2026 Anderson Technologies LLC. All rights reserved.</small>
+      <small>Arizona and California</small>
+    </div>
   </div>
 </footer>
 
-<script>
-  // Mobile menu toggle
-  const burger = document.getElementById('burger');
-  const links = document.getElementById('navlinks');
-  burger.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
