@@ -99,11 +99,11 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--white);line-height:1.05;
   display:flex;align-items:center;gap:32px;
   background:rgba(12,13,17,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border:1px solid var(--line-2);border-radius:999px;
-  padding:11px 12px 11px 24px;width:100%;max-width:960px;
+  padding:11px 12px 11px 24px;width:100%;max-width:1040px;
   box-shadow:0 8px 40px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.06);
 }
 .nav-logo{height:46px;width:auto}
-.nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+.nav-links{display:flex;align-items:center;gap:23px;margin-left:auto}
 .nav-links a{color:var(--text);font-size:.94rem;font-weight:500}
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
 .nav-cta{padding:10px 12px 10px 20px !important;font-size:.9rem}
