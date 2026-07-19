@@ -107,6 +107,7 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--white);line-height:1.05;
 .nav-links a{color:var(--text);font-size:.94rem;font-weight:500}
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
 .nav-cta{padding:10px 12px 10px 20px !important;font-size:.9rem}
+.nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#06070a}
 .burger{display:none;background:none;border:0;width:44px;height:44px;margin-left:auto;position:relative;cursor:pointer}
 .burger span{position:absolute;left:12px;width:20px;height:1.6px;background:var(--white);border-radius:2px;transition:transform .5s var(--ease),opacity .3s var(--ease)}
 .burger span:nth-child(1){top:18px}
