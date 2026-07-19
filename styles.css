@@ -289,3 +289,15 @@ body::before{animation:orbDrift 26s ease-in-out infinite;will-change:transform}
 @keyframes dataRun{from{transform:translateX(-90px)}to{transform:translateX(calc(100vw + 90px))}}
 
 @media(max-width:1024px){.rack-wrap{display:none}}
+
+/* ===== Photos ===== */
+.photo-band{position:relative;overflow:hidden;isolation:isolate}
+.pb-img{width:100%;height:clamp(340px,44vw,560px);object-fit:cover;object-position:center;display:block;
+  animation:kb 22s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+.pb-fade{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,var(--bg),transparent 18%,transparent 82%,var(--bg))}
+.img-frame{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--r-lg);padding:7px;
+  transition:border-color .6s var(--ease)}
+.img-frame:hover{border-color:rgba(76,141,255,.4)}
+.img-frame img{width:100%;height:clamp(240px,36vw,420px);object-fit:cover;border-radius:calc(var(--r-lg) - 7px);display:block}
