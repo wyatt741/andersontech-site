@@ -102,7 +102,7 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--white);line-height:1.05;
   padding:11px 12px 11px 24px;width:100%;max-width:960px;
   box-shadow:0 8px 40px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.06);
 }
-.nav-logo{height:40px;width:auto}
+.nav-logo{height:46px;width:auto}
 .nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
 .nav-links a{color:var(--text);font-size:.94rem;font-weight:500}
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
@@ -145,7 +145,7 @@ section{padding:clamp(80px,12vw,150px) 0}
 .hero h1{margin-bottom:28px;max-width:16ch}
 .hero .lead{margin-bottom:40px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-logo{height:clamp(58px,10vw,104px);width:auto;margin-bottom:38px;opacity:.96;filter:drop-shadow(0 8px 40px rgba(76,141,255,.25))}
+.hero-logo{height:clamp(66px,11vw,124px);width:auto;margin-bottom:38px;opacity:.98;filter:drop-shadow(0 8px 40px rgba(76,141,255,.25))}
 
 /* Double-bezel card */
 .shell{
@@ -220,7 +220,7 @@ form .btn-primary{width:100%;justify-content:center;border:0}
 /* Footer */
 footer{border-top:1px solid var(--line);padding:64px 0 40px;background:rgba(255,255,255,.012)}
 .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:44px}
-.foot-logo{height:38px;margin-bottom:18px;opacity:.9}
+.foot-logo{height:46px;margin-bottom:18px;opacity:.9}
 .foot-brand p{color:var(--muted);font-size:.92rem;max-width:34ch}
 .foot-cols{display:flex;gap:64px;flex-wrap:wrap}
 .foot-col h5{color:var(--white);font-family:var(--font-display);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;font-weight:500}
