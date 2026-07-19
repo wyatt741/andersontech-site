@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anderson Technologies LLC — Managed IT, Cybersecurity & Cloud | Arizona & California</title>
+<meta name="description" content="Anderson Technologies LLC delivers reliable managed IT support, cybersecurity, and cloud solutions for growing businesses across Arizona and California.">
+<link rel="icon" href="assets/favicon.ico">
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Anderson Technologies LLC — Managed IT, Cybersecurity & Cloud">
+<meta property="og:description" content="Reliable IT support, cybersecurity, and cloud solutions for growing Arizona businesses.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0a0a0b; --panel:#111114; --panel-2:#16161a; --line:#26262c;
+    --text:#c9c9d1; --muted:#8a8a95; --white:#f4f4f6;
+    --accent:#4da3ff; --accent-2:#7cc0ff;
+    --silver:linear-gradient(180deg,#ffffff 0%,#c4c8d0 55%,#8f95a1 100%);
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--accent-2)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{color:var(--white);line-height:1.15;letter-spacing:-.02em;font-weight:700}
+  .eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+  /* Buttons */
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;font-size:.95rem;
+    transition:transform .12s ease,box-shadow .2s ease;border:1px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#04121f;box-shadow:0 6px 24px rgba(77,163,255,.28)}
+  .btn-primary:hover{color:#04121f;transform:translateY(-2px);box-shadow:0 10px 30px rgba(77,163,255,.4)}
+  .btn-ghost{border:1px solid var(--line);color:var(--white);background:transparent}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--white)}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.82);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  nav .logo{height:30px;width:auto}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{color:var(--text);font-size:.92rem;font-weight:500}
+  .nav-links a:hover{color:var(--white)}
+  .nav-cta{padding:10px 20px;font-size:.88rem}
+  .burger{display:none;background:none;border:0;color:var(--white);font-size:1.6rem;cursor:pointer}
+
+  /* Hero */
+  .hero{position:relative;padding:110px 0 96px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(650px 340px at 78% 8%,rgba(77,163,255,.16),transparent 60%),
+      linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px) 0 0/44px 44px,
+      linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px) 0 0/44px 44px;
+    mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:1;max-width:840px}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:18px 0 20px}
+  .hero h1 .grad{background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:1.18rem;color:var(--muted);max-width:640px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* Trust strip */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+  .trust .wrap{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between;padding:22px 24px}
+  .trust div{font-size:.9rem;color:var(--muted)}
+  .trust b{color:var(--white);font-weight:600}
+
+  /* Sections */
+  section.block{padding:88px 0}
+  .section-head{max-width:680px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:12px 0 14px}
+  .section-head p{color:var(--muted);font-size:1.06rem}
+
+  /* Services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 26px;
+    transition:border-color .2s ease,transform .2s ease}
+  .card:hover{border-color:rgba(77,163,255,.5);transform:translateY(-4px)}
+  .card .ico{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;margin-bottom:18px;
+    background:linear-gradient(160deg,rgba(77,163,255,.18),rgba(77,163,255,.04));border:1px solid rgba(77,163,255,.25)}
+  .card .ico svg{width:24px;height:24px;stroke:var(--accent-2);fill:none;stroke-width:1.8}
+  .card h3{font-size:1.22rem;margin-bottom:12px}
+  .card ul{list-style:none;margin-top:6px}
+  .card li{position:relative;padding-left:22px;margin-bottom:8px;font-size:.95rem;color:var(--text)}
+  .card li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;
+    background:var(--accent);box-shadow:0 0 10px rgba(77,163,255,.6)}
+
+  /* Why / two-col */
+  .why{background:linear-gradient(180deg,var(--bg),var(--panel-2))}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .why h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:12px 0 18px}
+  .why p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
+  .valuegrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .value{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .value b{color:var(--white);display:block;margin-bottom:6px;font-size:1rem}
+  .value span{font-size:.9rem;color:var(--muted)}
+
+  /* Contact */
+  .contact{background:var(--panel)}
+  .contact .split{grid-template-columns:1fr 1.1fr;align-items:start}
+  .contact h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:12px 0 18px}
+  .contact-info li{list-style:none;margin-bottom:18px;color:var(--text)}
+  .contact-info .lbl{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+  .contact-info a{color:var(--white);font-size:1.1rem;font-weight:600}
+  form{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:30px}
+  .field{margin-bottom:18px}
+  label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:7px}
+  input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;
+    padding:12px 14px;color:var(--white);font-size:.98rem;font-family:inherit}
+  input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(77,163,255,.18)}
+  textarea{min-height:120px;resize:vertical}
+  form .btn-primary{width:100%;border:0;font-size:1rem}
+  .formnote{font-size:.8rem;color:var(--muted);margin-top:14px;text-align:center}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg)}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .foot img{height:24px;opacity:.85}
+  .foot small{color:var(--muted);font-size:.85rem}
+
+  @media(max-width:860px){
+    .cards{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:36px}
+    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;
+      background:var(--panel);border-bottom:1px solid var(--line);padding:8px 0}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:14px 24px;width:100%;border-top:1px solid var(--line)}
+    .nav-links .nav-cta{margin:12px 24px;text-align:center}
+    .burger{display:block}
+    .valuegrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top"><img src="assets/logo.png" alt="Anderson Technologies" class="logo"></a>
+      <div class="nav-links" id="navlinks">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Managed IT · Cybersecurity · Cloud</span>
+      <h1>IT that just works, so you can <span class="grad">focus on growth.</span></h1>
+      <p class="lead">Anderson Technologies delivers reliable managed IT support, cybersecurity, and
+        cloud solutions that keep growing businesses connected, secure, and running — without the downtime.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get Started Today</a>
+        <a href="tel:+14802874190" class="btn btn-ghost">Call (480) 287-4190</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div><b>Two locations</b> — Arizona &amp; California</div>
+      <div><b>Security-first</b> — protection built into every layer</div>
+      <div><b>One partner</b> — support, security &amp; cloud under one roof</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Everything your business needs to stay online and protected</h2>
+        <p>From day-to-day help desk to hardening your defenses and moving you to the cloud —
+          one team that owns the whole stack.</p>
+      </div>
+      <div class="cards">
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M2 20h20"/><path d="M9 16v4M15 16v4"/></svg></div>
+          <h3>Managed IT Support</h3>
+          <ul>
+            <li>Responsive help desk for your team</li>
+            <li>24/7 monitoring &amp; proactive maintenance</li>
+            <li>Workstation, server &amp; network management</li>
+            <li>Vendor &amp; software management</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
+          <h3>Cybersecurity</h3>
+          <ul>
+            <li>Endpoint protection &amp; threat detection</li>
+            <li>Email security &amp; phishing defense</li>
+            <li>Backups &amp; disaster recovery</li>
+            <li>Security awareness for your staff</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1.3A3.5 3.5 0 0117 18z"/></svg></div>
+          <h3>Cloud Solutions</h3>
+          <ul>
+            <li>Microsoft 365 &amp; Google Workspace</li>
+            <li>Cloud migration &amp; setup</li>
+            <li>Secure file storage &amp; sharing</li>
+            <li>Remote &amp; hybrid work enablement</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="block why" id="why">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Why Anderson Technologies</span>
+        <h2>A technology partner, not just a help line</h2>
+        <p>At Anderson Technologies LLC, we deliver reliable managed IT services, cybersecurity, and
+          smart solutions that keep your business connected and secure — so you can focus on growth.</p>
+        <p>We're local, we pick up the phone, and we treat your network like it's our own.</p>
+      </div>
+      <div class="valuegrid">
+        <div class="value"><b>Two locations</b><span>Local presence in both Arizona and California.</span></div>
+        <div class="value"><b>Fast response</b><span>Real people who answer, not endless ticket queues.</span></div>
+        <div class="value"><b>Security-first</b><span>Protection designed in from the ground up.</span></div>
+        <div class="value"><b>Straight talk</b><span>Plain-English advice, no jargon or upsells.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block contact" id="contact">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Let's talk about your IT</h2>
+        <p style="color:var(--muted);margin-bottom:28px">Tell us what's slowing you down. We'll get back to you within one business day.</p>
+        <ul class="contact-info">
+          <li><span class="lbl">Arizona</span><a href="tel:+14802874190">(480) 287-4190</a></li>
+          <li><span class="lbl">California</span><a href="tel:+18053408055">(805) 340-8055</a></li>
+          <li><span class="lbl">Email</span><a href="mailto:info@andersontechsupport.com">info@andersontechsupport.com</a></li>
+          <li><span class="lbl">Serving</span><span style="color:var(--white);font-weight:600">Arizona &amp; California</span></li>
+        </ul>
+      </div>
+
+      <!-- Posts to FormSubmit (free, no signup) → emails submissions to info@andersontechsupport.com.
+           First real submission triggers a one-time confirmation email you must click to activate. -->
+      <form action="https://formsubmit.co/info@andersontechsupport.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from andersontechsupport.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="msg">How can we help?</label>
+          <textarea id="msg" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="formnote">Or email us directly at info@andersontechsupport.com</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <img src="assets/logo.png" alt="Anderson Technologies">
+    <small>© 2026 Anderson Technologies LLC · Arizona &amp; California · All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const burger = document.getElementById('burger');
+  const links = document.getElementById('navlinks');
+  burger.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+</script>
+
+</body>
+</html>
