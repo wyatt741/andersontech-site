@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSSV = "styles.css?v=33"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
-def head(title, desc, canon, r="", noindex=False, extra=""):
+def head(title, desc, canon, r="", noindex=False, extra="", og="assets/dc-branded.jpg"):
     rob = '\n<meta name="robots" content="noindex">' if noindex else ""
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ def head(title, desc, canon, r="", noindex=False, extra=""):
 <meta property="og:url" content="https://andersontechsupport.com/{canon}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://andersontechsupport.com/assets/dc-branded.jpg">
+<meta property="og:image" content="https://andersontechsupport.com/{og}">
 <meta name="twitter:card" content="summary_large_image">{extra}
 <meta name="theme-color" content="#050506">
 <link rel="icon" href="{r}assets/favicon.ico">
@@ -286,7 +286,7 @@ svc_body = "".join(f'''
       </section>''' for sid, title, lvl, para, lis, tail in svc_sections)
 services = (head("Services | Anderson Technologies LLC",
   "Electrical and mechanical commissioning, integrated systems testing, design review and submittal QA for data center construction in Arizona and California.",
-  "services.html")
+  "services.html", og="assets/og-services.jpg")
  + nav("Services")
  + f'''<main id="main">
 {page_hero("Services", "Commissioning services for data center construction.",
@@ -401,7 +401,7 @@ for i, (tag, t, img, alt, p, lis) in enumerate(engagements):
     proj_splits += f'<div class="split-band{flip}">{inner}</div>'
 projects = (head("Projects | Anderson Technologies LLC",
   "Representative commissioning engagements across hyperscale, colocation, and mission critical construction. Client details withheld under confidentiality.",
-  "projects.html")
+  "projects.html", og="assets/og-projects.jpg")
  + nav("Projects")
  + f'''<main id="main">
 {page_hero("Projects", "The work behind the numbers.",
@@ -422,7 +422,7 @@ projects = (head("Projects | Anderson Technologies LLC",
 # ============ ABOUT ============
 about = (head("About | Anderson Technologies LLC",
   "Anderson Technologies LLC is an independent commissioning firm for data center and mission critical construction, serving the Phoenix metro corridor and Southern California.",
-  "about.html")
+  "about.html", og="assets/og-about.jpg")
  + nav("About")
  + f'''<main id="main">
 {page_hero("About", "Independent commissioning, built on field discipline.",
@@ -502,7 +502,7 @@ careers_tables = "".join(f'''
     </table>''' for track in ["Field", "Office", "Technology"])
 careers = (head("Careers | Anderson Technologies LLC",
   "Open roles in data center commissioning: field engineering, project management, office operations, and the AI and software team. Arizona, California, and remote.",
-  "careers.html")
+  "careers.html", og="assets/og-careers.jpg")
  + nav("Careers")
  + f'''<main id="main">
 {page_hero("Careers", "Commissioning rewards people who read the drawings and then go check.",
@@ -548,7 +548,7 @@ for rl in ROLES:
   "title": "{rl["title"]}",
   "description": "<p>{html.escape(rl["desc"])}</p>",
   "datePosted": "2026-07-19",
-  "validThrough": "2026-10-19",
+  "validThrough": "2027-01-19",
   "employmentType": "FULL_TIME",
   "hiringOrganization": {{ "@type": "Organization", "name": "Anderson Technologies", "sameAs": "https://andersontechsupport.com" }},
   {locjson}
@@ -559,7 +559,7 @@ for rl in ROLES:
     apply_q = f'{rl["title"]} ({rl["loc"]})'.replace(" ", "%20").replace("/", "%2F").replace("&", "%26")
     body = (head(f'{rl["title"]} | Careers | Anderson Technologies LLC',
       f'{rl["title"]}, {locline}. {rl["pay"]} annual base. Join the Anderson Technologies commissioning team.',
-      f'careers/{rl["slug"]}.html', r="../", extra=jsonld)
+      f'careers/{rl["slug"]}.html', r="../", extra=jsonld, og="assets/og-careers.jpg")
      + nav("Careers", r="../")
      + f'''<main id="main">
 {page_hero("Open role", rl["title"], rl["desc"])}
@@ -582,7 +582,7 @@ for rl in ROLES:
 # ============ CONTACT ============
 contact = (head("Contact | Anderson Technologies LLC",
   "Start a conversation about commissioning your data center or mission critical construction project. We respond within one business day.",
-  "contact.html")
+  "contact.html", og="assets/og-contact.jpg")
  + nav("")
  + f'''<main id="main">
 {page_hero("Contact", "Start a conversation.",
