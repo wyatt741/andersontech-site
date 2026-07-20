@@ -199,7 +199,7 @@ svc_sections = [
    "Functional performance under load"],
   "Deliverable: verified sequences, point to point records, and functional test results for every mechanical asset."),
  ("ist", "Integrated Systems Testing", "Level 5",
-  "Level 5 is where the building proves itself. We script the failure scenarios, pull the breakers, and document how the facility rides through and recovers. Utility loss, generator failover, cooling response under full load, and every interaction between systems that only shows up when they run together.",
+  "The final phase of the program and the highest stakes scope we deliver. We plan, script, and execute the facility wide test campaign that proves the site can carry critical load: what gets tested, in what order, with which witnesses, and what evidence closes it out.",
   ["IST script development and review",
    "Utility failure and failover scenarios under load",
    "Cross discipline coordination of electrical and mechanical response",
