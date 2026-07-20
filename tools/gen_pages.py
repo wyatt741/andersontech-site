@@ -347,7 +347,7 @@ process = (head("Commissioning Levels 1-5 | Anderson Technologies LLC",
 
 # ============ PROJECTS ============
 engagements = [
- ("Hyperscale | Arizona","Data Center Campus","assets/dc-racks.jpg","Server racks in a data hall",
+ ("Hyperscale | Arizona","Data Center Campus","assets/dc-substation.jpg","Medium voltage switchyard and distribution",
   "Electrical commissioning of medium voltage distribution, UPS, and standby generation across multiple data halls, from installation verification through functional performance testing.",
   ["Medium voltage switchgear and distribution","UPS systems and standby generation","Construction verification through Level 4"]),
  ("Colocation | Southern California","Colocation Facility","assets/dc-hvac.jpg","Chilled water plant",
