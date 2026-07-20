@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=25"
+CSSV = "styles.css?v=26"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -354,19 +354,19 @@ about = (head("About | Anderson Technologies LLC",
  + f'''<main id="main">
 {page_hero("About", "Independent commissioning, built on field discipline.",
  "We are the third party that proves the build works. One question drives every engagement: does the facility perform as designed. Here is who we are and how we operate.")}
-  <section class="full-bleed u-nopad">
-    <div class="split-band">
-      <div class="media"><img src="assets/wyatt-anderson.jpg" alt="Wyatt Anderson, founder of Anderson Technologies" loading="lazy" width="1000" height="1339" class="obj-top"></div>
-      <div class="copy"><div class="inner reveal">
-        <span class="eyebrow">Principal</span>
-        <h2>Every sign off carries a name.</h2>
+  <section class="band-tight">
+    <div class="principal wide reveal">
+      <div class="img-frame"><img src="assets/wyatt-anderson.jpg" alt="Wyatt Anderson, founder of Anderson Technologies" loading="lazy" width="1000" height="1339"></div>
+      <div>
+        <span class="eyebrow u-mb18">Principal</span>
+        <h2 class="h2 u-mb14">Every sign off carries a name.</h2>
         <p class="muted">Anderson Technologies is founded and led by Wyatt Anderson, a commissioning engineer working data center construction in the field. Test scripts, issue logs, and turnover records on our projects are owned end to end by the engineer whose name is on them.</p>
-        <ul>
+        <ul class="p-list">
           <li>Electrical and mechanical commissioning, one accountable lead</li>
           <li>Field experience across hyperscale and colocation construction</li>
           <li>Documentation built for audit, warranty, and operations</li>
         </ul>
-      </div></div>
+      </div>
     </div>
   </section>
   <div class="statement full-bleed">
