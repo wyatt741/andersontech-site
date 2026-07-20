@@ -476,3 +476,9 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
 .svc-applied a{border:1px solid var(--line-2);border-radius:999px;padding:5px 13px;font-size:.85rem;
   color:var(--accent-2);transition:background .3s var(--ease),color .3s var(--ease)}
 .svc-applied a:hover{background:var(--accent-soft);color:var(--white)}
+
+/* ===== Services section banner image (matchable services only) ===== */
+.svc-media{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);
+  margin:18px 0 22px;aspect-ratio:16/8;background:var(--panel)}
+.svc-media img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:640px){.svc-media{aspect-ratio:16/10}}
