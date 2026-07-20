@@ -217,6 +217,41 @@ svc_sections = [
    "Issue and punch tracking to closure",
    "Turnover package assembly"],
   "Deliverable: a commissioning record built for audit, warranty, and operations."),
+ ("retro", "Retro-Commissioning and Live-Site Testing", "Operating facilities",
+  "Verification does not end at turnover. We commission and re test systems inside operating facilities, working within maintenance windows and method of procedure controls so critical load is never put at risk.",
+  ["MOP driven testing in live environments",
+   "Performance verification after upgrades, expansions, and repairs",
+   "Failover and redundancy validation on operating systems",
+   "Deficiency investigation and closure in production facilities"],
+  "Deliverable: verified performance on a live site with zero unplanned impact to critical load."),
+ ("owners-rep", "Owner's Representation and Program Management", "All levels",
+  "For owners who need the whole commissioning program run, not just executed. We stand in for the owner across the construction schedule: scoping, vendor coordination, level gates, and reporting.",
+  ["Commissioning program scoping and scheduling",
+   "Vendor and trade coordination through every level gate",
+   "Progress and issue reporting to the owner",
+   "Turnover acceptance on the owner's behalf"],
+  "Deliverable: a commissioning program that runs itself on paper and answers to the owner in person."),
+ ("scripts", "Test Script Development", "Levels 3 through 5",
+  "Script libraries built to your specifications and sequences, whether or not we run the testing. Per asset class, per level, aligned to the SOO, and ready for the field.",
+  ["Functional and integrated test scripts per asset class",
+   "Alignment to sequences of operations and specification requirements",
+   "Review and completeness auditing of existing script libraries",
+   "Field ready formatting with witness and signature flow"],
+  "Deliverable: a script library your field team can execute and your owner can audit."),
+ ("ai-qa", "AI-Assisted Document QA", "Levels 0 through 1",
+  "Commissioning produces thousands of pages of specifications, submittals, and scripts. Our internal tooling mines them into structured, checkable data: requirements extracted, submittal conflicts flagged, script coverage audited. An engineer reviews and signs every finding.",
+  ["Specification mining into structured requirements tables",
+   "Automated spec versus submittal conflict detection",
+   "Script completeness auditing against extracted requirements",
+   "Human engineer review and sign off on every finding"],
+  "Deliverable: document review at a scale and speed manual QA cannot match, with an engineer's name on the result."),
+ ("fwt", "Factory Witness Testing", "Level 1",
+  "Standalone factory witness attendance for critical equipment. We review the test protocol before the visit, witness against specification, and clear equipment to ship or document exactly why it cannot.",
+  ["Factory acceptance test protocol review",
+   "On site witness against specification",
+   "Deviation documentation and resolution tracking",
+   "Ship or hold clearance with a documented basis"],
+  "Deliverable: equipment that arrives on site already proven, with the record to show it."),
  ("deliverables", "Deliverables", "Every engagement",
   "Every engagement ends with a documented record. These are the artifacts we hand over as standard.",
   ["Executed test scripts, signed per system and level",
@@ -225,8 +260,10 @@ svc_sections = [
    "Turnover package organized for operations"],
   "If it was tested, it is in the record. If it failed, the record shows what changed and when it passed."),
 ]
-rail_links = "".join(f'<a href="#{sid}">{t.split(" and ")[0] if sid=="design-review" else t}</a>'
-                     for sid, t, *_ in [(s[0], s[1]) for s in svc_sections])
+RAIL = {"electrical":"Electrical","mechanical":"Mechanical","ist":"IST","design-review":"Design Review",
+        "qaqc":"QA/QC","retro":"Retro-Cx","owners-rep":"Owner's Rep","scripts":"Test Scripts",
+        "ai-qa":"AI Document QA","fwt":"Factory Witness","deliverables":"Deliverables"}
+rail_links = "".join(f'<a href="#{x[0]}">{RAIL.get(x[0], x[1])}</a>' for x in svc_sections)
 svc_body = "".join(f'''
       <section class="svc-section" id="{sid}">
         <span class="lvl">{lvl}</span>
@@ -338,9 +375,18 @@ projects = (head("Projects | Anderson Technologies LLC",
   "projects.html")
  + nav("Projects")
  + f'''<main id="main">
-{page_hero("Projects", "Our clients do not appear on this page.",
- "In this industry, that is how it should be. The work below is described by scope and discipline; client and site details stay confidential, on this page and everywhere else.")}
+{page_hero("Projects", "500+ MW of mission critical construction, verified.",
+ "Hyperscale campuses, colocation facilities, and enterprise builds across Arizona and California. Scope below is described as delivered.")}
+  <div class="stat-band" aria-label="Portfolio figures">
+    <div class="stats">
+      <div class="stat reveal"><span class="num" data-target="500">500+</span><span class="lbl">MW commissioned</span></div>
+      <div class="stat reveal d1"><span class="num" data-target="30">30</span><span class="lbl">Data halls through IST</span></div>
+      <div class="stat reveal d2"><span class="num" data-target="3000">3,000+</span><span class="lbl">Test scripts executed</span></div>
+      <div class="stat reveal d3"><span class="num" data-target="2">2</span><span class="lbl">States served</span></div>
+    </div>
+  </div>
   <section class="full-bleed u-nopad">{proj_splits}</section>
+  <section class="band-tight"><p class="muted">Client and site identities are withheld under NDA. Every engagement above is described exactly as delivered.</p></section>
 {cta(h="Have a project on the board?", p="Share the scope and construction schedule and we will outline our commissioning approach.")}
 </main>''' + footer())
 
