@@ -159,7 +159,7 @@ body.menu-open .mobile-menu a:nth-child(7){transition-delay:.44s}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .page-hero{min-height:52vh;min-height:52svh;display:grid;align-content:end;
   padding-block:clamp(8rem,15vh,11rem) clamp(2.5rem,6vw,4rem);position:relative}
-.page-hero h1{font-size:var(--step-4);letter-spacing:-.03em;margin:20px 0 18px;max-width:20ch}
+.page-hero h1{font-size:var(--step-4);letter-spacing:-.03em;margin:20px 0 18px;max-width:24ch}
 .page-hero .lead{max-width:68ch}
 
 /* LED rack svg animation */
