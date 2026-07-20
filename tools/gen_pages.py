@@ -260,6 +260,8 @@ svc_sections = [
    "Turnover package organized for operations"],
   "If it was tested, it is in the record. If it failed, the record shows what changed and when it passed."),
 ]
+_ORDER = ["design-review","ai-qa","fwt","scripts","electrical","mechanical","qaqc","ist","retro","owners-rep","deliverables"]
+svc_sections = sorted(svc_sections, key=lambda x: _ORDER.index(x[0]))
 RAIL = {"electrical":"Electrical","mechanical":"Mechanical","ist":"IST","design-review":"Design Review",
         "qaqc":"QA/QC","retro":"Retro-Cx","owners-rep":"Owner's Rep","scripts":"Test Scripts",
         "ai-qa":"AI Document QA","fwt":"Factory Witness","deliverables":"Deliverables"}
