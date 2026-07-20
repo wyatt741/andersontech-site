@@ -394,7 +394,7 @@ projects = (head("Projects | Anderson Technologies LLC",
   "projects.html")
  + nav("Projects")
  + f'''<main id="main">
-{page_hero("Projects", "500+ MW of electrical capacity commissioned.",
+{page_hero("Projects", "The work behind the numbers.",
  "Hyperscale campuses, colocation facilities, and enterprise builds across Arizona and California. Scope below is described as delivered.")}
   <div class="stat-band" aria-label="Portfolio figures">
     <div class="stats">
