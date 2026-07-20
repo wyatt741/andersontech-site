@@ -6,8 +6,12 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=35"
+CSSV = "styles.css?v=37"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
+SUN = '<svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4"/></svg>'
+MOON = '<svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>'
+TOGGLE = f'<button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">{SUN}{MOON}</button>'
+FOUC = '<script>(function(){try{var t=localStorage.getItem("theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>'
 
 def head(title, desc, canon, r="", noindex=False, extra="", og="assets/dc-branded.jpg"):
     rob = '\n<meta name="robots" content="noindex">' if noindex else ""
@@ -31,6 +35,7 @@ def head(title, desc, canon, r="", noindex=False, extra="", og="assets/dc-brande
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}{CSSV}">
+{FOUC}
 </head>
 <body>
 '''
@@ -50,6 +55,7 @@ def nav(active="", r=""):
       {a("projects.html","Projects")}
       {a("about.html","About")}
       {a("careers.html","Careers")}
+      {TOGGLE}
       <a href="{r}contact.html" class="btn btn-primary nav-cta">Start a conversation {ARROW}</a>
     </div>
     <button class="burger" aria-label="Menu"><span></span><span></span></button>
@@ -62,6 +68,7 @@ def nav(active="", r=""):
   <a href="{r}about.html">About</a>
   <a href="{r}careers.html">Careers</a>
   <a href="{r}contact.html">Contact</a>
+  {TOGGLE}
 </div>
 '''
 
