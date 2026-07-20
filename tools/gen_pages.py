@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=29"
+CSSV = "styles.css?v=30"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -358,12 +358,18 @@ engagements = [
   "Specification and submittal review at scale, identifying and resolving conflicts before installation across a multi site program.",
   ["Specification mining and submittal review","Spec versus submittal conflict resolution","Tracker managed issue closure"]),
 ]
+ENG_METRICS = {
+    # slug-by-title: fill with owner-verified figures only, e.g. "Data Center Campus": ["120 MW", "1,400 assets"]
+}
 proj_splits = ""
 for i, (tag, t, img, alt, p, lis) in enumerate(engagements):
     media = f'<div class="media"><img src="{img}" alt="{alt}" loading="lazy" width="1300" height="866"></div>'
+    chips = "".join(f'<span class="chip">{m}</span>' for m in ENG_METRICS.get(t, []))
+    chips_html = f'<div class="metric-chips">{chips}</div>' if chips else ""
     copy = f'''<div class="copy"><div class="inner reveal">
         <span class="eyebrow">{tag}</span>
         <h2>{t}</h2>
+        {chips_html}
         <p class="muted">{p}</p>
         <ul>{"".join(f"<li>{li}</li>" for li in lis)}</ul>
       </div></div>'''

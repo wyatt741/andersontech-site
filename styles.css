@@ -465,3 +465,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
   background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent;min-width:1.2em}
 .lvl-row h3{font-size:1.15rem;margin-bottom:6px}
 .lvl-row p{font-size:.95rem}
+
+.metric-chips{display:flex;gap:10px;flex-wrap:wrap;margin:2px 0 14px}
+.chip{border:1px solid var(--line-2);border-radius:999px;padding:6px 14px;
+  font-family:var(--font-display);font-size:.9rem;color:var(--accent-2);background:rgba(76,141,255,.06)}
