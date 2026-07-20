@@ -347,13 +347,13 @@ process = (head("Commissioning Levels 1-5 | Anderson Technologies LLC",
 
 # ============ PROJECTS ============
 engagements = [
- ("Hyperscale | Arizona","Data Center Campus","assets/dc-substation.jpg","Medium voltage switchyard and distribution",
+ ("Hyperscale | Arizona","Data Center Campus","assets/dc-serverroom.jpg","Data hall racks in a hyperscale facility",
   "Electrical commissioning of medium voltage distribution, UPS, and standby generation across multiple data halls, from installation verification through functional performance testing.",
   ["Medium voltage switchgear and distribution","UPS systems and standby generation","Construction verification through Level 4"]),
  ("Colocation | Southern California","Colocation Facility","assets/dc-hvac.jpg","Chilled water plant",
   "Mechanical commissioning of the chilled water plant, cooling distribution units, and CRAH systems, including sequence of operations validation and controls verification.",
   ["Chilled water plant and heat rejection","CRAH systems and cooling distribution units","SOO validation and point to point verification"]),
- ("Enterprise | Southwest","Integrated Systems Testing","assets/dc-serverroom.jpg","Server room infrastructure",
+ ("Enterprise | Southwest","Integrated Systems Testing","assets/dc-racks.jpg","Server hardware under load",
   "Whole facility integrated testing, including utility failure and failover scenarios under load, coordinated across electrical and mechanical systems.",
   ["Facility wide IST under load","Utility loss and generator failover scenarios","Cross discipline recovery verification"]),
  ("Fit Out | Multi Site","Submittal and QA/QC Program","assets/dc-fieldwork.jpg","Field verification work",
