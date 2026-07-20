@@ -433,7 +433,7 @@ about = (head("About | Anderson Technologies LLC",
     </div>
   </section>
   <div class="statement full-bleed">
-    <p class="reveal">No construction contract. No equipment sales. Findings reported <em>without conflict.</em></p>
+    <p class="reveal">No construction contract. No equipment sales.<br>Findings reported <em>without conflict.</em></p>
   </div>
   <section>
     <div class="section-head">
