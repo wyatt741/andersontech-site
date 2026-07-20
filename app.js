@@ -69,3 +69,13 @@ document.querySelectorAll('.stat-band .num[data-target]').forEach(el => {
   }, { threshold: 0.4 });
   obs.observe(el);
 });
+
+// Theme toggle (dark is the default identity; light is the option)
+document.querySelectorAll('.theme-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+    var next = dark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  });
+});
