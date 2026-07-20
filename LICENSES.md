@@ -19,3 +19,4 @@ depict an identifiable client facility. See docs/REDESIGN_PLAN.md Section 7.
 | assets/dc-colo.jpg | Pexels photo 4508751 | Pexels License | Web use (Projects: Colocation Facility) |
 | assets/dc-ist.jpg | Pexels photo 32845692 | Pexels License | Web use (Projects: Integrated Systems Testing) |
 | assets/dc-qaqc.jpg | Pexels photo 8960942 | Pexels License | Web use (Projects: Submittal and QA/QC) |
+| assets/og-*.jpg | Composite: owned logo + Pexels photo backgrounds (see per-page) | Owned composite / Pexels License | Social share (Open Graph) cards, 1200x630 |
