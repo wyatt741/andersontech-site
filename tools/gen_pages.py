@@ -394,12 +394,12 @@ projects = (head("Projects | Anderson Technologies LLC",
   "projects.html")
  + nav("Projects")
  + f'''<main id="main">
-{page_hero("Projects", "500+ MW of mission critical construction, verified.",
+{page_hero("Projects", "500+ MW of electrical capacity commissioned.",
  "Hyperscale campuses, colocation facilities, and enterprise builds across Arizona and California. Scope below is described as delivered.")}
   <div class="stat-band" aria-label="Portfolio figures">
     <div class="stats">
-      <div class="stat reveal"><span class="num" data-target="500">500+</span><span class="lbl">MW commissioned</span></div>
-      <div class="stat reveal d1"><span class="num" data-target="30">30</span><span class="lbl">Data halls through IST</span></div>
+      <div class="stat reveal"><span class="num" data-target="500">500+</span><span class="lbl">MW of electrical capacity commissioned</span></div>
+      <div class="stat reveal d1"><span class="num" data-target="30">30</span><span class="lbl">Data halls taken through IST</span></div>
       <div class="stat reveal d2"><span class="num" data-target="3000">3,000+</span><span class="lbl">Test scripts executed</span></div>
       <div class="stat reveal d3"><span class="num" data-target="2">2</span><span class="lbl">States served</span></div>
     </div>
