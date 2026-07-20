@@ -284,7 +284,7 @@ svc_body = "".join(f'''
         <ul>{"".join(f"<li>{li}</li>" for li in lis)}</ul>
         <p class="muted">{tail}</p>
       </section>''' for sid, title, lvl, para, lis, tail in svc_sections)
-services = (head("Services | Anderson Technologies LLC",
+services = (head("Commissioning Services | Anderson Technologies",
   "Electrical and mechanical commissioning, integrated systems testing, design review and submittal QA for data center construction in Arizona and California.",
   "services.html", og="assets/og-services.jpg")
  + nav("Services")
@@ -330,7 +330,7 @@ panels = "".join(f'''
       </div>
     </div>''' for pid, n, t, p, lis in levels)
 recap = "".join(f'<a href="#{pid}"><span class="lnum">L{n}</span><b>{t}</b></a>' for pid, n, t, _, _ in levels)
-process = (head("Commissioning Levels 1-5 | Anderson Technologies LLC",
+process = (head("Commissioning Levels 1-5 | Anderson Technologies",
   "How data center commissioning works: Levels 1 through 5, from factory witness testing to integrated systems testing. The staged verification program we run on every project.",
   "process.html")
  + nav("Process")
@@ -399,7 +399,7 @@ for i, (tag, t, img, alt, p, lis) in enumerate(engagements):
     flip = ' flip' if i % 2 else ''
     inner = (copy + media) if i % 2 else (media + copy)
     proj_splits += f'<div class="split-band{flip}">{inner}</div>'
-projects = (head("Projects | Anderson Technologies LLC",
+projects = (head("Commissioning Projects | Anderson Technologies",
   "Representative commissioning engagements across hyperscale, colocation, and mission critical construction. Client details withheld under confidentiality.",
   "projects.html", og="assets/og-projects.jpg")
  + nav("Projects")
@@ -420,8 +420,8 @@ projects = (head("Projects | Anderson Technologies LLC",
 </main>''' + footer())
 
 # ============ ABOUT ============
-about = (head("About | Anderson Technologies LLC",
-  "Anderson Technologies LLC is an independent commissioning firm for data center and mission critical construction, serving the Phoenix metro corridor and Southern California.",
+about = (head("About | Anderson Technologies Commissioning",
+  "Anderson Technologies is an independent commissioning firm for data center and mission critical construction, serving the Phoenix metro corridor and Southern California.",
   "about.html", og="assets/og-about.jpg")
  + nav("About")
  + f'''<main id="main">
@@ -500,7 +500,7 @@ careers_tables = "".join(f'''
       <thead><tr><th scope="col">Role</th><th scope="col">Location</th><th scope="col">Annual base range</th><th scope="col"><span class="sr-only">Details</span></th></tr></thead>
       <tbody>{role_rows(track)}</tbody>
     </table>''' for track in ["Field", "Office", "Technology"])
-careers = (head("Careers | Anderson Technologies LLC",
+careers = (head("Commissioning Careers | Anderson Technologies",
   "Open roles in data center commissioning: field engineering, project management, office operations, and the AI and software team. Arizona, California, and remote.",
   "careers.html", og="assets/og-careers.jpg")
  + nav("Careers")
@@ -557,7 +557,7 @@ for rl in ROLES:
 }}
 </script>'''
     apply_q = f'{rl["title"]} ({rl["loc"]})'.replace(" ", "%20").replace("/", "%2F").replace("&", "%26")
-    body = (head(f'{rl["title"]} | Careers | Anderson Technologies LLC',
+    body = (head(f'{rl["title"]} | Careers | Anderson Technologies',
       f'{rl["title"]}, {locline}. {rl["pay"]} annual base. Join the Anderson Technologies commissioning team.',
       f'careers/{rl["slug"]}.html', r="../", extra=jsonld, og="assets/og-careers.jpg")
      + nav("Careers", r="../")
@@ -580,7 +580,7 @@ for rl in ROLES:
     write(f'careers/{rl["slug"]}.html', body)
 
 # ============ CONTACT ============
-contact = (head("Contact | Anderson Technologies LLC",
+contact = (head("Contact | Anderson Technologies Commissioning",
   "Start a conversation about commissioning your data center or mission critical construction project. We respond within one business day.",
   "contact.html", og="assets/og-contact.jpg")
  + nav("")
@@ -641,7 +641,7 @@ contact = (head("Contact | Anderson Technologies LLC",
 </script>''' + footer())
 
 # ============ THANKS / PRIVACY / 404 ============
-thanks = (head("Message received | Anderson Technologies LLC",
+thanks = (head("Message received | Anderson Technologies Commissioning",
   "Thanks for reaching out. We respond within one business day.", "thanks.html", noindex=True)
  + nav("")
  + f'''<main id="main">
@@ -655,7 +655,7 @@ thanks = (head("Message received | Anderson Technologies LLC",
   </section>
 </main>''' + footer())
 
-privacy = (head("Privacy | Anderson Technologies LLC",
+privacy = (head("Privacy | Anderson Technologies Commissioning",
   "What the Anderson Technologies contact form collects and how it is handled.", "privacy.html")
  + nav("")
  + f'''<main id="main">
@@ -672,7 +672,7 @@ privacy = (head("Privacy | Anderson Technologies LLC",
   </section>
 </main>''' + footer())
 
-notfound = (head("Page not found | Anderson Technologies LLC",
+notfound = (head("Page not found | Anderson Technologies Commissioning",
   "That page does not exist.", "404.html", noindex=True)
  + nav("")
  + f'''<main id="main">
@@ -712,7 +712,7 @@ levels_inline = f"""
       </section>"""
 services = services.replace('<section class="svc-section" id="deliverables">', levels_inline + '\n      <section class="svc-section" id="deliverables">')
 services = services.replace('<a href="#deliverables">Deliverables</a>', '<a href="#process">Process</a><a href="#deliverables">Deliverables</a>')
-process = head("Commissioning Levels 1-5 | Anderson Technologies LLC",
+process = head("Commissioning Levels 1-5 | Anderson Technologies",
   "This page has moved. Commissioning Levels 1 through 5 now live on the Services page.",
   "services.html", noindex=True,
   extra='\n<meta http-equiv="refresh" content="0;url=/services.html#process">') + '<main id="main" style="padding:120px 24px"><p>This page moved to <a href="/services.html#process">Services: Commissioning Levels 1-5</a>.</p></main></body></html>'
