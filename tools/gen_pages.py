@@ -360,7 +360,7 @@ about = (head("About | Anderson Technologies LLC",
       <div>
         <span class="eyebrow u-mb18">Principal</span>
         <h2 class="h2 u-mb14">Every sign off carries a name.</h2>
-        <p class="muted">Anderson Technologies is founded and led by Wyatt Anderson, a commissioning engineer working data center construction in the field. Test scripts, issue logs, and turnover records on our projects are owned end to end by the engineer whose name is on them.</p>
+        <p class="muted">Wyatt has held every seat in the commissioning chain, from field engineer through project management and program direction, and now leads Anderson Technologies as founder and CEO. He has directed commissioning programs staffed by more than 50 engineers, technicians, and trade partners.</p>
         <ul class="p-list">
           <li>Electrical and mechanical commissioning, one accountable lead</li>
           <li>Field experience across hyperscale and colocation construction</li>
