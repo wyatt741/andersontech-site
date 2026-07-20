@@ -45,6 +45,7 @@ def nav(active="", r=""):
   <nav class="nav" aria-label="Main">
     <a href="{r}index.html"><img src="{r}assets/logo-lg.png" alt="Anderson Technologies" class="nav-logo" width="935" height="205"></a>
     <div class="nav-links">
+      {a("index.html","Home")}
       {a("services.html","Services")}
       {a("process.html","Process")}
       {a("projects.html","Projects")}
@@ -301,10 +302,10 @@ process = (head("Commissioning Levels 1-5 | Anderson Technologies LLC",
     <div class="section-head u-mb0">
       <span class="eyebrow reveal">Who runs it</span>
       <h2 class="h2 reveal">One independent, accountable engineer</h2>
-      <p class="lead reveal d1">We represent the owner. No construction contract, no equipment sales, no conflict in reporting what the testing shows. Every script, issue, and sign off carries a name. <a href="about.html">Meet the firm</a>.</p>
+      <p class="lead reveal d1">A commissioning program is only as good as the engineer running it. Every script, issue, and sign off on our projects carries a name. <a href="about.html">Meet the firm</a>.</p>
     </div>
   </section>
-{cta()}
+{cta(h="Put Levels 1 through 5 on your schedule.", p="The earlier commissioning starts, the cheaper every issue is to fix.")}
 </main>''' + footer())
 
 # ============ PROJECTS ============
@@ -352,7 +353,7 @@ about = (head("About | Anderson Technologies LLC",
  + nav("About")
  + f'''<main id="main">
 {page_hero("About", "Independent commissioning, built on field discipline.",
- "Anderson Technologies commissions the electrical and mechanical systems behind data center and mission critical construction. As a vendor neutral third party, our only role is to verify performance on behalf of the owner.")}
+ "We are the third party that proves the build works. One question drives every engagement: does the facility perform as designed. Here is who we are and how we operate.")}
   <section class="full-bleed u-nopad">
     <div class="split-band">
       <div class="media"><img src="assets/dc-engineer.jpg" alt="Engineer on a data center floor" loading="lazy" width="1300" height="866"></div>
@@ -404,7 +405,7 @@ about = (head("About | Anderson Technologies LLC",
       </div></div>
     </div>
   </section>
-{cta(h="Discuss your commissioning scope.", p="Independent commissioning for data center and mission critical construction. We respond within one business day.")}
+{cta(h="Discuss your commissioning scope.", p="Tell us where your project stands and we will outline our approach.")}
 </main>''' + footer())
 
 # ============ CAREERS ============
@@ -501,7 +502,7 @@ for rl in ROLES:
       <a href="../careers.html" class="btn btn-ghost">All roles</a>
     </div>
   </section>
-{cta(r="../", h="Questions about the role?", p="Reach out and ask. We respond within one business day.")}
+{cta(r="../", h="Questions about the role?", p="Reach out and ask. No forms needed for a question.")}
 </main>''' + footer(r="../"))
     write(f'careers/{rl["slug"]}.html', body)
 
