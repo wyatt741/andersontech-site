@@ -456,3 +456,12 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
 .p-list{list-style:none;margin-top:16px}
 .p-list li{position:relative;padding-left:22px;margin-bottom:9px}
 .p-list li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:2px;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+
+/* ===== Levels sequence inside Services (merged Process) ===== */
+.lvl-seq{margin-top:26px;display:grid;gap:14px}
+.lvl-row{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2rem);align-items:start;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;scroll-margin-top:120px}
+.lvl-row .lnum{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);line-height:1;
+  background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent;min-width:1.2em}
+.lvl-row h3{font-size:1.15rem;margin-bottom:6px}
+.lvl-row p{font-size:.95rem}
