@@ -49,7 +49,7 @@ img{max-width:100%;height:auto;display:block}
 main{display:grid;grid-template-columns:
   [full-start] minmax(1.5rem,1fr)
   [wide-start] minmax(0,8rem)
-  [content-start] min(1140px,100%) [content-end]
+  [content-start] min(1140px,calc(100% - 3rem)) [content-end]
   minmax(0,8rem) [wide-end]
   minmax(1.5rem,1fr) [full-end]}
 main>*{grid-column:content}
