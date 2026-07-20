@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=30"
+CSSV = "styles.css?v=31"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -363,17 +363,28 @@ engagements = [
 ENG_METRICS = {
     # slug-by-title: fill with owner-verified figures only, e.g. "Data Center Campus": ["120 MW", "1,400 assets"]
 }
+SERVICE_LINKS = {  # engagement title -> services it drew on (anchor, label)
+    "Data Center Campus": [("electrical", "Electrical Commissioning")],
+    "Colocation Facility": [("mechanical", "Mechanical Commissioning")],
+    "Integrated Systems Testing": [("ist", "Integrated Systems Testing")],
+    "Submittal and QA/QC Program": [("design-review", "Design Review"), ("qaqc", "QA/QC Support")],
+}
 proj_splits = ""
 for i, (tag, t, img, alt, p, lis) in enumerate(engagements):
     media = f'<div class="media"><img src="{img}" alt="{alt}" loading="lazy" width="1300" height="866"></div>'
     chips = "".join(f'<span class="chip">{m}</span>' for m in ENG_METRICS.get(t, []))
     chips_html = f'<div class="metric-chips">{chips}</div>' if chips else ""
+    svc = SERVICE_LINKS.get(t, [])
+    svc_html = ('<p class="svc-applied"><span>Services applied</span>'
+                + "".join(f'<a href="services.html#{a}">{lbl}</a>' for a, lbl in svc)
+                + '</p>') if svc else ""
     copy = f'''<div class="copy"><div class="inner reveal">
         <span class="eyebrow">{tag}</span>
         <h2>{t}</h2>
         {chips_html}
         <p class="muted">{p}</p>
         <ul>{"".join(f"<li>{li}</li>" for li in lis)}</ul>
+        {svc_html}
       </div></div>'''
     flip = ' flip' if i % 2 else ''
     inner = (copy + media) if i % 2 else (media + copy)
