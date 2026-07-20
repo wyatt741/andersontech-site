@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=28"
+CSSV = "styles.css?v=29"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -47,7 +47,6 @@ def nav(active="", r=""):
     <div class="nav-links">
       {a("index.html","Home")}
       {a("services.html","Services")}
-      {a("process.html","Process")}
       {a("projects.html","Projects")}
       {a("about.html","About")}
       {a("careers.html","Careers")}
@@ -59,7 +58,6 @@ def nav(active="", r=""):
 <div class="mobile-menu" id="mobile-menu">
   <a href="{r}index.html">Home</a>
   <a href="{r}services.html">Services</a>
-  <a href="{r}process.html">Process</a>
   <a href="{r}projects.html">Projects</a>
   <a href="{r}about.html">About</a>
   <a href="{r}careers.html">Careers</a>
@@ -96,7 +94,7 @@ def footer(r=""):
       <a href="{r}services.html#mechanical">Mechanical Commissioning</a>
       <a href="{r}services.html#ist">Integrated Systems Testing</a>
       <a href="{r}services.html#design-review">Design Review and Submittal QA</a>
-      <a href="{r}process.html">Commissioning Levels 1-5</a>
+      <a href="{r}services.html#process">Commissioning Levels 1-5</a>
     </div>
     <div class="foot-col">
       <h5>Company</h5>
@@ -615,12 +613,34 @@ notfound = (head("Page not found | Anderson Technologies LLC",
 </main>''' + footer())
 
 # ============ SITEMAP ============
-urls = [("", "1.0"), ("services.html", "0.8"), ("process.html", "0.8"), ("projects.html", "0.7"),
+urls = [("", "1.0"), ("services.html", "0.8"), ("projects.html", "0.7"),
         ("contact.html", "0.7"), ("about.html", "0.6"), ("careers.html", "0.6"), ("privacy.html", "0.3")]
 urls += [(f'careers/{r["slug"]}.html', "0.5") for r in ROLES]
 sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
  + "".join(f'  <url><loc>https://andersontechsupport.com/{u}</loc><lastmod>2026-07-19</lastmod><priority>{p}</priority></url>\n' for u, p in urls)
  + '</urlset>\n')
+
+
+# ==== MERGE: levels section into services, process.html becomes redirect ====
+lvl_rows = "".join(f"""
+        <div class="lvl-row" id="{pid}">
+          <span class="lnum" aria-hidden="true">{n}</span>
+          <div><h3>{t}</h3><p class="muted">{pdesc}</p></div>
+        </div>""" for pid, n, t, pdesc, _lis in levels)
+levels_inline = f"""
+      <section class="svc-section" id="process">
+        <span class="lvl">The program</span>
+        <h2>Commissioning Levels 1 through 5</h2>
+        <p>Commissioning is not a punch list. It is a staged verification program that follows every critical system from the factory floor to full load failure testing. Level 0 design review comes first when we are engaged early; these five levels carry the build from there.</p>
+        <div class="lvl-seq">{lvl_rows}
+        </div>
+      </section>"""
+services = services.replace('<section class="svc-section" id="deliverables">', levels_inline + '\n      <section class="svc-section" id="deliverables">')
+services = services.replace('<a href="#deliverables">Deliverables</a>', '<a href="#process">Process</a><a href="#deliverables">Deliverables</a>')
+process = head("Commissioning Levels 1-5 | Anderson Technologies LLC",
+  "This page has moved. Commissioning Levels 1 through 5 now live on the Services page.",
+  "services.html", noindex=True,
+  extra='\n<meta http-equiv="refresh" content="0;url=/services.html#process">') + '<main id="main" style="padding:120px 24px"><p>This page moved to <a href="/services.html#process">Services: Commissioning Levels 1-5</a>.</p></main></body></html>'
 
 write("services.html", services)
 write("process.html", process)
