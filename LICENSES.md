@@ -14,3 +14,4 @@
 
 Rules: neutral captions only on stock imagery (no first person claims), and no image may
 depict an identifiable client facility. See docs/REDESIGN_PLAN.md Section 7.
+| assets/wyatt-anderson.jpg | Owner supplied (personal headshot) | Owned | About page principal photo |
