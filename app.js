@@ -44,3 +44,28 @@ if (rail) {
   }, { rootMargin: '-30% 0px -60% 0px' });
   targets.forEach(t => spy.observe(t));
 }
+
+// Stat band count-up: DOM holds the real value from load; animation is visual only
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.stat-band .num[data-target]').forEach(el => {
+  const raw = el.getAttribute('data-target');
+  if (reduce) return; // final value already in markup
+  const target = parseFloat(raw.replace(/[^0-9.]/g, ''));
+  if (!target) return;
+  const done = el.textContent; // keep exact formatted final
+  const obs = new IntersectionObserver((es) => {
+    es.forEach(e => {
+      if (!e.isIntersecting) return;
+      obs.unobserve(el);
+      const t0 = performance.now(), dur = 1400;
+      const step = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = done.replace(/[0-9,.]+/, Math.round(target * eased).toLocaleString('en-US'));
+        if (p < 1) requestAnimationFrame(step); else el.textContent = done;
+      };
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 });
+  obs.observe(el);
+});
