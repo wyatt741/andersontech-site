@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=23"
+CSSV = "styles.css?v=24"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -356,7 +356,7 @@ about = (head("About | Anderson Technologies LLC",
  "We are the third party that proves the build works. One question drives every engagement: does the facility perform as designed. Here is who we are and how we operate.")}
   <section class="full-bleed u-nopad">
     <div class="split-band">
-      <div class="media"><img src="assets/dc-engineer.jpg" alt="Engineer on a data center floor" loading="lazy" width="1300" height="866"></div>
+      <div class="media"><img src="assets/wyatt-anderson.jpg" alt="Wyatt Anderson, founder of Anderson Technologies" loading="lazy" width="1000" height="1339" class="obj-top"></div>
       <div class="copy"><div class="inner reveal">
         <span class="eyebrow">Principal</span>
         <h2>Every sign off carries a name.</h2>
