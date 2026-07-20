@@ -6,7 +6,7 @@ No em dashes anywhere. No client names. Static output only."""
 import os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSSV = "styles.css?v=32"
+CSSV = "styles.css?v=33"
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
 
 def head(title, desc, canon, r="", noindex=False, extra=""):
@@ -266,10 +266,20 @@ RAIL = {"electrical":"Electrical","mechanical":"Mechanical","ist":"IST","design-
         "qaqc":"QA/QC","retro":"Retro-Cx","owners-rep":"Owner's Rep","scripts":"Test Scripts",
         "ai-qa":"AI Document QA","fwt":"Factory Witness","deliverables":"Deliverables"}
 rail_links = "".join(f'<a href="#{x[0]}">{RAIL.get(x[0], x[1])}</a>' for x in svc_sections)
+SVC_IMG = {  # only services with a genuine, real photo match get an image; advisory/document services stay clean
+  "electrical": ("assets/dc-panel.jpg", "Technician commissioning control and drive equipment"),
+  "mechanical": ("assets/dc-hvac.jpg", "Central chilled water plant"),
+  "qaqc": ("assets/dc-qaqc.jpg", "QA/QC inspection with a field checklist"),
+  "ist": ("assets/dc-ist.jpg", "Engineer running integrated systems testing"),
+  "retro": ("assets/dc-serverroom.jpg", "Live data hall under retro-commissioning"),
+}
+def _svc_media(sid):
+    v = SVC_IMG.get(sid)
+    return f'\n        <div class="svc-media"><img src="{v[0]}" alt="{v[1]}" loading="lazy" width="1300" height="800"></div>' if v else ""
 svc_body = "".join(f'''
       <section class="svc-section" id="{sid}">
         <span class="lvl">{lvl}</span>
-        <h2>{title}</h2>
+        <h2>{title}</h2>{_svc_media(sid)}
         <p>{para}</p>
         <ul>{"".join(f"<li>{li}</li>" for li in lis)}</ul>
         <p class="muted">{tail}</p>
