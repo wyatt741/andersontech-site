@@ -399,7 +399,7 @@ projects = (head("Projects | Anderson Technologies LLC",
   <div class="stat-band" aria-label="Portfolio figures">
     <div class="stats">
       <div class="stat reveal"><span class="num" data-target="500">500+</span><span class="lbl">MW of electrical capacity commissioned</span></div>
-      <div class="stat reveal d1"><span class="num" data-target="100">100</span><span class="lbl">Data halls taken through IST</span></div>
+      <div class="stat reveal d1"><span class="num" data-target="100">100+</span><span class="lbl">Data halls taken through IST</span></div>
       <div class="stat reveal d2"><span class="num" data-target="15000">15,000+</span><span class="lbl">Test scripts executed</span></div>
       <div class="stat reveal d3"><span class="num" data-target="2">2</span><span class="lbl">States served</span></div>
     </div>
