@@ -15,3 +15,7 @@
 
 Rules: neutral captions only on stock imagery (no first person claims), and no image may
 depict an identifiable client facility. See docs/REDESIGN_PLAN.md Section 7.
+| assets/dc-campus-build.jpg | Pexels photo 4832564 | Pexels License | Web use (Projects: Data Center Campus) |
+| assets/dc-colo.jpg | Pexels photo 4508751 | Pexels License | Web use (Projects: Colocation Facility) |
+| assets/dc-ist.jpg | Pexels photo 32845692 | Pexels License | Web use (Projects: Integrated Systems Testing) |
+| assets/dc-qaqc.jpg | Pexels photo 8960942 | Pexels License | Web use (Projects: Submittal and QA/QC) |

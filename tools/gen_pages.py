@@ -347,16 +347,16 @@ process = (head("Commissioning Levels 1-5 | Anderson Technologies LLC",
 
 # ============ PROJECTS ============
 engagements = [
- ("Hyperscale | Arizona","Data Center Campus","assets/dc-serverroom.jpg","Data hall racks in a hyperscale facility",
+ ("Hyperscale | Arizona","Data Center Campus","assets/dc-campus-build.jpg","Data center campus under construction",
   "Electrical commissioning of medium voltage distribution, UPS, and standby generation across multiple data halls, from installation verification through functional performance testing.",
   ["Medium voltage switchgear and distribution","UPS systems and standby generation","Construction verification through Level 4"]),
- ("Colocation | Southern California","Colocation Facility","assets/dc-hvac.jpg","Chilled water plant",
+ ("Colocation | Southern California","Colocation Facility","assets/dc-colo.jpg","Colocation data hall with caged server rows",
   "Mechanical commissioning of the chilled water plant, cooling distribution units, and CRAH systems, including sequence of operations validation and controls verification.",
   ["Chilled water plant and heat rejection","CRAH systems and cooling distribution units","SOO validation and point to point verification"]),
- ("Enterprise | Southwest","Integrated Systems Testing","assets/dc-racks.jpg","Server hardware under load",
+ ("Enterprise | Southwest","Integrated Systems Testing","assets/dc-ist.jpg","Commissioning engineer running integrated systems testing",
   "Whole facility integrated testing, including utility failure and failover scenarios under load, coordinated across electrical and mechanical systems.",
   ["Facility wide IST under load","Utility loss and generator failover scenarios","Cross discipline recovery verification"]),
- ("Fit Out | Multi Site","Submittal and QA/QC Program","assets/dc-fieldwork.jpg","Field verification work",
+ ("Fit Out | Multi Site","Submittal and QA/QC Program","assets/dc-qaqc.jpg","QA/QC inspection with a field checklist",
   "Specification and submittal review at scale, identifying and resolving conflicts before installation across a multi site program.",
   ["Specification mining and submittal review","Spec versus submittal conflict resolution","Tracker managed issue closure"]),
 ]
