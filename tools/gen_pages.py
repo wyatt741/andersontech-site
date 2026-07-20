@@ -123,7 +123,7 @@ def footer(r=""):
   </div>
   <span class="watermark" aria-hidden="true">ANDERSON</span>
 </footer>
-<script src="{r}app.js"></script>
+<script src="{r}app.js?v=2"></script>
 </body>
 </html>
 '''
