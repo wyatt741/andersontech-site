@@ -188,7 +188,7 @@ body.menu-open .mobile-menu a:nth-child(7){transition-delay:.44s}
   font-size:1.05rem;color:var(--muted);white-space:nowrap;padding:0 4px}
 .marquee-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);
   margin:0 30px;box-shadow:0 0 10px var(--accent)}
-@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes marq{to{transform:translateX(-25%)}}
 
 /* ===== Splits (alternating full-width 50/50) ===== */
 .split-band{grid-column:full;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:60vh}
