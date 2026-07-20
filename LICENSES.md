@@ -10,7 +10,7 @@
 | assets/dc-engineer.jpg | Pexels photo 1181354 | Pexels License | Web use |
 | assets/dc-racks.jpg | Pexels photo 37730212 | Pexels License | Web use |
 | assets/dc-conduit.jpg | Pexels photo 6486694 | Pexels License | Web use (currently unreferenced, retained) |
-| assets/dc-substation.jpg | Pexels photo 25537595 | Pexels License | Web use (Projects: Data Center Campus) |
+| assets/dc-substation.jpg | Pexels photo 25537595 | Pexels License | Web use (currently unreferenced, retained) |
 | assets/wyatt-anderson.jpg | Owner supplied (personal headshot) | Owned | About page principal photo |
 
 Rules: neutral captions only on stock imagery (no first person claims), and no image may
