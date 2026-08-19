@@ -3,3 +3,6 @@
 Thumbs.db
 docs/
 preview-*.png
+
+# Claude Code local config (per-machine ECC trim)
+.claude/
